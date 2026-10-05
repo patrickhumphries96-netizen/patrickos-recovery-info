@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="no-referrer">
+  <title>PatrickOS Recovery</title>
+  <style>body{max-width:48rem;margin:3rem auto;padding:0 1.25rem;font:1.1rem/1.65 system-ui,sans-serif;color:#202733;background:#fafafa}h1,h2{line-height:1.25}a{color:#174d8c}footer{margin-top:3rem;border-top:1px solid #ddd;padding-top:1rem;font-size:.95rem}</style>
+</head>
+<body>
+  <main>
+    <h1>PatrickOS Recovery</h1>
+    <p>A personal desktop tool for encrypted backup and verified restoration of PatrickOS project source and explicitly selected durable project data.</p>
+    <h2>How it works</h2>
+    <p>The owner prepares a recovery pack containing Git source history, selected project data and restore instructions. Restic encrypts the pack on the owner's computer. Rclone transfers the encrypted backup files to the owner's Google Drive account. Recovery downloads and checks those files before reconstructing source and project data.</p>
+    <h2>Why Google Drive access is requested</h2>
+    <p>The application requests the limited <code>drive.file</code> permission. It uses this permission to create, read, update and delete backup repository files created by, or explicitly authorized for, this application. It reads their metadata to locate backups and verify restoration. The permission does not give general access to unrelated Drive files.</p>
+    <p>This is a personal recovery tool, not a public storage service. Backup contents are not published on this website.</p>
+    <h2>Privacy and control</h2>
+    <p>Google Drive data is used only for backup, integrity checking, restoration and owner-authorized maintenance. It is not sold, used for advertising or used to train AI models. Read the <a href="privacy.html">PatrickOS Recovery privacy policy</a> for storage, retention and access details.</p>
+    <p>For questions, use the support email shown in the Google authorization screen for this application.</p>
+  </main>
+  <footer><a href="privacy.html">Privacy policy</a></footer>
+</body>
+</html>
